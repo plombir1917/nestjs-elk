@@ -2,6 +2,14 @@
 
 ### How to run
 
+Create service token for Kibana inside Elasticsearch container:
+
+```bash
+bin/elasticsearch-service-tokens create elastic/kibana default
+```
+
+Input token into .env, then:
+
 ```bash
 docker-compose build --parallel
 docker-compose up -d
