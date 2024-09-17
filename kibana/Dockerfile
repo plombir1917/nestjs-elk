@@ -1,0 +1,3 @@
+ARG ELK_VERSION
+
+FROM docker.io/kibana:${ELK_VERSION}

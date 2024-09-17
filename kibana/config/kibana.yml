@@ -1,0 +1,11 @@
+server.name: kibana
+server.host: '0.0.0.0'
+
+# Включение мониторинга
+xpack.monitoring.ui.container.elasticsearch.enabled: true
+
+# Настройки подключения к Elasticsearch
+elasticsearch.hosts: ['http://elasticsearch:9200'] # Укажите правильный адрес Elasticsearch, если он другой
+
+# Аутентификация с использованием сервисного токена
+elasticsearch.serviceAccountToken: 'AAEAAWVsYXN0aWMva2liYW5hL2RlZmF1bHQ6Szd0X3ZTWjFSSnloRk42OU1YbUVlQQ'
