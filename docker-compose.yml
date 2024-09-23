@@ -42,6 +42,10 @@ services:
         source: ./logstash/pipeline
         target: /usr/share/logstash/pipeline
         read_only: true
+      - type: bind
+        source: ./logstash/postgresql-42.7.4.jar # Добавьте этот volume
+        target: /usr/share/logstash/postgresql-42.7.4.jar # Убедитесь, что путь совпадает с конфигурацией
+        read_only: true
     ports:
       - '5000:5000/tcp'
       - '5044:5044/tcp'
