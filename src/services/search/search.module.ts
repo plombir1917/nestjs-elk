@@ -19,6 +19,11 @@ import { ConfigModule } from '@nestjs/config';
     }),
   ],
   controllers: [SearchController],
-  providers: [SearchService],
+  providers: [
+    {
+      provide: 'SearchServiceInterface',
+      useClass: SearchService,
+    },
+  ],
 })
 export class SearchModule {}
