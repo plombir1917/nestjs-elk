@@ -1,6 +1,5 @@
 import { Module } from '@nestjs/common';
 import { SearchService } from './search.service';
-import { SearchController } from './search.controller';
 import { ElasticsearchModule } from '@nestjs/elasticsearch';
 import { ConfigModule } from '@nestjs/config';
 
@@ -18,7 +17,6 @@ import { ConfigModule } from '@nestjs/config';
       requestTimeout: +process.env.ELASTICSEARCH_REQ_TIMEOUT,
     }),
   ],
-  controllers: [SearchController],
   providers: [
     {
       provide: 'SearchServiceInterface',

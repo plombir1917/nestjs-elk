@@ -9,7 +9,7 @@ export class SearchService
   implements SearchServiceInterface<any>
 {
   constructor() {
-    super(ConfigSearch.searchConfig(process.env.ELASTIC_SEARCH_URL));
+    super(ConfigSearch.searchConfig(process.env.ELASTICSEARCH_NODE));
   }
 
   public async insertIndex(bulkData: any): Promise<any> {
